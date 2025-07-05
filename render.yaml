@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: tdc-critical-spare-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 24h
+    healthCheckPath: /health
+
+  - type: web
+    name: tdc-critical-spare-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://tdc-critical-spare-backend.onrender.com/api 

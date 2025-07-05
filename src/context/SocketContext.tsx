@@ -29,7 +29,12 @@ export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
   const connect = () => {
     if (socket?.connected) return;
 
-    const newSocket = io('http://localhost:3001', {
+    // Get the socket URL based on environment
+    const socketUrl = import.meta.env.PROD 
+      ? 'https://tdc-critical-spare-backend.onrender.com'
+      : 'http://localhost:3001';
+
+    const newSocket = io(socketUrl, {
       transports: ['websocket', 'polling'],
       timeout: 20000,
     });
