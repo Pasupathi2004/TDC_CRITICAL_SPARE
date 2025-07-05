@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Example Item",
+    "make": "ExampleMake",
+    "model": "X100",
+    "specification": "10mm, 5V",
+    "rack": "R1",
+    "bin": "B2",
+    "quantity": 50,
+    "minimumQuantity": 5,
+    "createdAt": "2025-07-05T09:07:18.704Z",
+    "updatedAt": "2025-07-05T09:07:18.704Z",
+    "updatedBy": "pasu"
+  }
+]
