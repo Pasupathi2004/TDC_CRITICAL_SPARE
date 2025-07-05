@@ -2,7 +2,7 @@
 const getApiUrl = () => {
   // Check if we're in production (Vite sets this during build)
   if (import.meta.env.PROD) {
-    return import.meta.env.VITE_API_URL || 'https://tdc-critical-spare-backend.onrender.com/api';
+    return import.meta.env.VITE_API_URL || 'https://tdc-critical-spare.onrender.com/api';
   }
   // Development environment
   return 'http://localhost:3001/api';

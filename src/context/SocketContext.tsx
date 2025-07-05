@@ -31,7 +31,7 @@ export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
 
     // Get the socket URL based on environment
     const socketUrl = import.meta.env.PROD 
-      ? 'https://tdc-critical-spare-backend.onrender.com'
+      ? 'https://tdc-critical-spare.onrender.com'
       : 'http://localhost:3001';
 
     const newSocket = io(socketUrl, {
